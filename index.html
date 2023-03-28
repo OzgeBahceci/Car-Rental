@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özge Bahçeci- Rent A Car</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4"><h2>Bi' Araç Kirala</h2></div>
+            <hr>
+        </div>
+
+        <div class="row m-5">
+            <div class="col-1"></div>
+            <div class="col-3 m-3">
+                <h2>Kullanıcı Ekle</h2>
+                <form onsubmit="return false">
+                    <input type="text " id="UserName" placeholder="İsim Soyisim" class="input">
+                    <br><br>
+                    <input type="number" max="100" min="1" id="Age" placeholder="Yaş"class="input">
+                    <br><br>
+                    <label>Cinsiyet</label>
+                    <input type="radio" name="gander" data-val="true" checked id="Erkek"class="input">
+                    <label for="">Erkek</label>
+                    <input type="radio" name="gander"  data-val="true"  id="Kadin"class="input">
+                    <label for="">Kadın</label>
+                    <br><br>
+                    <label>Ehliyet Durumu</label>
+                    <input type="checkbox" id="Licance" data-val="true"class="input">
+                    <br><br>
+                    <button id="AddUser" onclick="addUser()"class="input" >Kullanıcıyı Ekle</button>
+                </form>
+            </div>
+            <div class="col-3 m-3">
+                <h2>Araç Ekle</h2>
+                <input type="text" id="Brand" placeholder="Marka"class="input">
+                <br><br>
+                <input type="text" id="Color" placeholder="Renk"class="input">
+                <br><br>
+                <input type="text" id="Price" placeholder="Günlük Kiralama Fiyatı"class="input">
+                <br><br>
+                <button id="AddCar" onclick="addCar()"class="input" >Aracı Ekle</button>
+            </div>
+            <div class="col-3 m-3">
+                <h2>Araba Kirala</h2>
+                <form onsubmit="return false">
+                    
+                <label>Kullanıcı Seç</label>
+                <select id="SelectUser">
+                    <option value="UserId"class="input" >İsim Soyisim</option>
+                </select>
+                <br><br>
+                <label>Araç Seç</label>
+                <select id="SelectCar">
+                    <option value="CarId"class="input" >Araç</option>
+                </select>
+                <br><br>
+                <label>Kaç günlük Kiralık?</label>
+               <input type="number" min="1" value="1" id="RentDay"class="input" >
+               <br><br>
+               <button id="RentACar" onclick="addRent()"class="input" >Bu aracı kirala</button>              
+            </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row mb-5">
+            <!-- <div class="col-1"></div> -->
+            <div class="col-5">
+                <h2>Kullanıcılar</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#&nbsp;</th>
+                            <th>İsimSoyisim&nbsp;</th>
+                            <th>Yaş&nbsp;</th>
+                            <th>Cinsiyet&nbsp;</th>
+                            <th>Ehliyet Durumu&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody id="UserList">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-3">
+                <h2>Araçlar</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#&nbsp;</th>
+                            <th>Marka&nbsp;</th>
+                            <th>Renk&nbsp;</th>
+                            <th>Fiyat&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody id="CarList">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+                <h2>Kiralık Araç Listesi</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#&nbsp;</th>
+                            <th>Kiralayan&nbsp;</th>
+                            <th>Kiralanan&nbsp;</th>
+                            <th>KaçGün&nbsp;</th>
+                            <th>Tutar&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody id="RentList">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+</body>
+</html>
